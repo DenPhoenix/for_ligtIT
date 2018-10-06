@@ -1,10 +1,10 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include <cstdlib> //функция srand(),rand()
-#include <ctime> //функция time()
+#include <cstdlib> //ГґГіГ­ГЄГ¶ГЁГї srand(),rand()
+#include <ctime> //ГґГіГ­ГЄГ¶ГЁГї time()
 #include "Test 2 classes.h"
-using namespace std;
+using namespace std;//РїСЂ
 
 //class Card
    card::card(string C,string N):color(C),name(N){};
@@ -13,15 +13,15 @@ using namespace std;
    void card::show(){cout<<card::get_name()<<"-"<<card::get_color()<<";"<<endl;}
    int card::value (){
         int val(0);
-        if(name=="Шестерка"){val=1;}
-        if(name=="Семерка"){val=2;}
-        if(name=="Восьмерка"){val=3;}
-        if(name=="Девятка"){val=4;}
-        if(name=="Десятка"){val=5;}
-        if(name=="Валет"){val=6;}
-        if(name=="Дама"){val=7;}
-        if(name=="Король"){val=8;}
-        if(name=="Туз"){val=9;}
+        if(name=="ГГҐГ±ГІГҐГ°ГЄГ "){val=1;}
+        if(name=="Г‘ГҐГ¬ГҐГ°ГЄГ "){val=2;}
+        if(name=="Г‚Г®Г±ГјГ¬ГҐГ°ГЄГ "){val=3;}
+        if(name=="Г„ГҐГўГїГІГЄГ "){val=4;}
+        if(name=="Г„ГҐГ±ГїГІГЄГ "){val=5;}
+        if(name=="Г‚Г Г«ГҐГІ"){val=6;}
+        if(name=="Г„Г Г¬Г "){val=7;}
+        if(name=="ГЉГ®Г°Г®Г«Гј"){val=8;}
+        if(name=="Г’ГіГ§"){val=9;}
         return val;
     }
     int card::value(card& Trump){
@@ -33,8 +33,8 @@ using namespace std;
 
 //class card_deck
     card_deck::card_deck(){
-        vector<string> color{"Бубна","Чирва","Пика","Крест"};
-        vector<string> name{"Шестерка","Семерка","Восьмерка","Девятка","Десятка","Валет","Дама","Король","Туз"};
+        vector<string> color{"ГЃГіГЎГ­Г ","Г—ГЁГ°ГўГ ","ГЏГЁГЄГ ","ГЉГ°ГҐГ±ГІ"};
+        vector<string> name{"ГГҐГ±ГІГҐГ°ГЄГ ","Г‘ГҐГ¬ГҐГ°ГЄГ ","Г‚Г®Г±ГјГ¬ГҐГ°ГЄГ ","Г„ГҐГўГїГІГЄГ ","Г„ГҐГ±ГїГІГЄГ ","Г‚Г Г«ГҐГІ","Г„Г Г¬Г ","ГЉГ®Г°Г®Г«Гј","Г’ГіГ§"};
         for (unsigned int i=0;i<color.size();i++){
             for (unsigned int j=0;j<name.size();j++){
                 card tmp(color[i],name[j]);
@@ -57,7 +57,7 @@ using namespace std;
         tmp.push_back(pack[0]);
         pack.pop_back();
         pack=tmp;
-        cout<<"Колода перетасована..."<<endl;
+        cout<<"ГЉГ®Г«Г®Г¤Г  ГЇГҐГ°ГҐГІГ Г±Г®ГўГ Г­Г ..."<<endl;
     }
     card card_deck::give_card(){card res=pack[pack.size()-1];pack.pop_back();return res;}
     vector<card> card_deck::give_card(int N){
