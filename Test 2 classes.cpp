@@ -4,7 +4,7 @@
 #include <cstdlib> //ôóíêöèÿ srand(),rand()
 #include <ctime> //ôóíêöèÿ time()
 #include "Test 2 classes.h"
-using namespace std;//пр
+using namespace std;
 
 //class Card
    card::card(string C,string N):color(C),name(N){};
